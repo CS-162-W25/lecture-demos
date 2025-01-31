@@ -1,0 +1,11 @@
+1. In each .cpp file, every function that is called in that .cpp file must be DECLARED at least once before it is called
+
+Error: "No such function XYZ declared in this scope"
+
+2. Across all of your .cpp files, every function that is used ANYWHERE must be DEFINED exactly once, in ONE .cpp file
+
+Error: "Undefined reference to XYZ"
+
+3. In each .cpp file, every structure type that is used in that .cpp file must be DEFINED EXACTLY ONCE before it is used
+
+Error: No such type XYZ defined in this scope"
