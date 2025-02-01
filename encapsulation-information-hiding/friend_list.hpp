@@ -9,4 +9,6 @@ struct friend_list {
 	int n_friends;
 };
 
+void print_friend_list(const friend_list& list);
+
 #endif

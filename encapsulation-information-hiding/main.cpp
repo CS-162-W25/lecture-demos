@@ -3,15 +3,35 @@
 #include "person.hpp"
 #include "friend_list.hpp"
 
-void print_friend_list(const friend_list& list) {
-	std::cout << list.owner.name << ", age " << list.owner.age << std::endl;
-	std::cout << "Their friends are: " << std::endl;
+// Coupling: You want to make a feature change, which requires changing some
+// code, which requires changing some more code.
+//
+// "Tight", "loose". "Pervasive"
 
-	for (int i = 0; i < list.n_friends; i++) {
-		std::cout << list.friends[i].name << ", age " << list.friends[i].age << std::endl;
-	}
+/*
+int b() {
+	// Does some other stuff
+	return 10;
 }
 
+// Dependency: When one piece of code "uses" or "depends on" another piece of
+// code.
+void a() {
+	int x = b();
+
+	// Logic errors down here
+}*/
+
+// We can't get rid of coupling, but we can:
+// 1. Maybe reduce it
+// 2. Isolate it
+// 3. Move coupling around so that it occurs on pieces of code that are more stable
+
+// Encapsulation: The bundling, or "co-location", of data with the behaviors that operate on that data.
+//
+// Information hiding
+
+/*
 int main() {
 	person muhammad;
 	muhammad.name = "Muhammad Ali";
@@ -26,7 +46,7 @@ int main() {
 	ada.age = 36;
 
 	friend_list muhammad_friends;
-	muhammad_friends.owner = muhammad;
+	muhammad_friends.owner = muhammad; // Performing a copy
 	muhammad_friends.friends = new person[2];
 	muhammad_friends.friends[0] = kapli;
 	muhammad_friends.friends[1] = ada;
@@ -34,3 +54,4 @@ int main() {
 
 	print_friend_list(muhammad_friends);
 }
+*/

@@ -4,8 +4,11 @@
 #include <string>
 
 struct person {
-	std::string name;
-	int age;
+	std::string first_name;
+	std::string last_name;
+	datetime birth_date;
 };
+
+void print_person(const person& p);
 
 #endif
