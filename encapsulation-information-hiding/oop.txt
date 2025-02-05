@@ -1,0 +1,8 @@
+fighter f1;
+fighter f2;
+
+// Structured programming solution:
+// f2.health -= f1.power;
+
+// Object-oriented solution:
+f1.attack(f2);
