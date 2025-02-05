@@ -31,6 +31,16 @@ void a() {
 //
 // Information hiding
 
+int main() {
+	person muhammad;
+	// muhammad.first_name = "Muhammad";
+	// muhammad.last_name = "Ali";
+	// muhammad.age = 74;
+	muhammad.initialize("Muhammad", "Ali", 74);
+	
+	muhammad.print();
+}
+
 /*
 int main() {
 	person muhammad;
