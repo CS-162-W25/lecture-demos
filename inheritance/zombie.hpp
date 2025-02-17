@@ -28,6 +28,10 @@ private:
 	int sanity;
 public:
 	zombie();
+	void eat_brains();
+
+	// This is legal. This is called overriding.
+	void do_turn();
 };
 
 #endif
