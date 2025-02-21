@@ -7,8 +7,11 @@ vampire::vampire() : monster(10) {
 }
 
 void vampire::do_turn() {
-	this->monster::do_turn();
-
 	std::cout << "Argh! I'm a vampire! And I love to suck blood! " <<
 		std::endl;
+}
+
+monster* vampire::clone() {
+	vampire* copy = new vampire(*this);
+	return copy;
 }

@@ -12,8 +12,11 @@ void zombie::eat_brains() {
 }
 
 void zombie::do_turn() {
-	this->monster::do_turn();
-
 	std::cout << "Argh! I'm a zombie! And I love to eat brains! " <<
 		"My sanity is " << this->sanity << std::endl;
+}
+
+monster* zombie::clone() {
+	zombie* copy = new zombie(*this);
+	return copy;
 }

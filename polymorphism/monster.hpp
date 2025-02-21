@@ -13,7 +13,12 @@ private:
 public:
 	monster();
 	monster(int hp);
-	void do_turn();
+
+	// Virtual: This function shall be bound dynamically
+	virtual void do_turn() = 0;
+	virtual ~monster() = default;
+
+	virtual monster* clone() = 0;
 };
 
 #endif

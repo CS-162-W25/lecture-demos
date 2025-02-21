@@ -2,6 +2,8 @@
 #include "zombie.hpp"
 #include "vampire.hpp"
 
+// Polymorphism: "Many forms"
+
 void do_monster_turns(
 		monster** monsters,
 		int n_monsters) {
@@ -36,9 +38,15 @@ int main() {
 		vampire* v = new vampire;
 		monsters[i] = v;
 	}
-
 	
 	do_monster_turns(monsters, 15);
 	do_monster_turns(monsters, 15);
 	do_monster_turns(monsters, 15);
+
+	monster* m = monsters[0]->clone();
+
+	for (int i = 0; i < 15; i++) {
+		delete monsters[i];
+	}
+	delete [] monsters;
 }

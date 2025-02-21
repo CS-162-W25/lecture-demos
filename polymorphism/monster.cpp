@@ -10,7 +10,9 @@ monster::monster(int hp) : hp(hp) {
 	std::cout << "Monster nondefault constructor" << std::endl;
 }
 
+/*
 void monster::do_turn() {
 	std::cout << "Argh! I'm a monster! I have " <<
 		this->hp << " HP" << std::endl;
 }
+*/

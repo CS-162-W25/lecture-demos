@@ -10,6 +10,8 @@ public:
 
 	// This is legal. This is called overriding.
 	void do_turn();
+	virtual ~vampire() = default;
+	monster* clone();
 };
 
 
