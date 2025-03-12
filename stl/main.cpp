@@ -4,6 +4,18 @@
 #include <set>
 #include <multiset>
 #include <map>
+#include <stack>
+#include <queue>
+
+// Stacks: Last in, first out (LIFO)
+// Queues: First in first out (FIFO)
+
+// 1 2 3 4 5
+// 1 2 3 4 5
+//
+// 1 2 3 4 5
+// 5 4 3 2 1
+
 
 
 int main() {

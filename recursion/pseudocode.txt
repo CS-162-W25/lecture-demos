@@ -1,0 +1,17 @@
+remove(x): Removes x. However, this only works if x is a file, or an EMPTY
+	directory.
+
+Assume that it's possible to iterate over all of the "things" in a directory
+d
+
+my_folder
+	my_other_folder
+		my_file
+
+remove_all(d):
+	for each thing x within d:
+		if x is a nonempty directory:
+			remove_all(x) // recursive call
+		else:
+			remove(x)
+	remove(d)
